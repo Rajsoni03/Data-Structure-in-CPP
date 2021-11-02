@@ -25,6 +25,19 @@ class Array{
 				*(this->begin + i) = data;
 			}
 		}
+		// Copy Constructor
+		Array(const Array &obj){
+			// update size properties 
+			size = obj.size;
+
+			// update begin properties 
+			begin = new T[obj.size];
+
+			// update array elements
+			for (int i = 0; i < obj.size; ++i){
+				*(begin+i) = *(obj.begin + i);
+			}
+		}
 
 		// member methods
 		T at(unsigned index){
@@ -48,7 +61,6 @@ class Array{
 			return -1;
 		}
 		
-		// ###########[ Homework ]##############
 		// implement the binary search
 		int find_binary(T data){
 
@@ -81,7 +93,12 @@ class Array{
 		}
 
 
-
+		// Operator Overloading
+		T& operator[](const unsigned& index){
+			cout << &index << endl;
+			return *(begin + index);
+		}
+		
 };
 
 int main(){										 
@@ -92,11 +109,15 @@ int main(){
 		cin >> *(arr.begin + i);
 	}
 
-	cout << arr.find(5) << endl;
+	Array<int> arr2(arr);
 
-	cout << endl;
-	// ###########[ Homework ]##############
-	cout << arr.find_binary(10); 
+	cout << arr.size << endl;
+	cout << arr2.size << endl;
+
+	for (int i = 0; i < arr2.size; ++i)
+	{
+		cout << *(arr2.begin + i) << " " ;
+	}
 
 	return 0;
 }

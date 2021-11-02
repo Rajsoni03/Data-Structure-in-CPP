@@ -11,19 +11,59 @@ class Array{
 
 		// Constructors
 		Array(){
+			cout << "Default Constructor" << endl;
 			size = 1;
 			begin = new T[size];
 		}
 		Array(int size){
+			cout << "1 Para Constructor" << endl;
 			this->size = size;
 			begin = new T[this->size]; 
 		}
 		Array(int size, T data){
+			cout << "2 Para Constructor" << endl;
 			this->size = size;
 			begin = new T[this->size]; 
 			for (int i = 0; i < this->size; i++){
 				*(this->begin + i) = data;
 			}
+		}
+
+		// Copy Constructor
+		Array(const Array &obj){
+			cout << "Copy Constructor" << endl;
+			// update size properties 
+			size = obj.size;
+
+			// update begin properties 
+			begin = new T[obj.size];
+
+			// update array elements
+			for (int i = 0; i < obj.size; ++i){
+				*(begin+i) = *(obj.begin + i);
+			}
+		}
+
+		// Copy Assignment
+		Array& operator=(const Array &obj){
+			cout << "Copy Assignment" << endl;
+			// update size
+			this->size = obj.size;
+
+			// update begin pointer
+			delete[] begin;
+			begin = new T[obj.size];
+
+			// update elements
+			for (int i = 0; i < obj.size; ++i){
+				*(begin+i) = *(obj.begin + i);
+			}
+			return *this;
+		}
+
+		// Distructor
+		~Array(){
+
 		}
 
 		// member methods
@@ -48,7 +88,6 @@ class Array{
 			return -1;
 		}
 		
-		// ###########[ Homework ]##############
 		// implement the binary search
 		int find_binary(T data){
 
@@ -80,23 +119,30 @@ class Array{
 			return -1;
 		}
 
-
-
+		// Operator Overloading
+		T& operator[](const unsigned& index){
+			cout << &index << endl;
+			return *(begin + index);
+		}
+		
 };
 
 int main(){										 
 	
-	Array<int> arr(10); 
+	Array<int> arr1(10); 
 
 	for (int i = 0; i < 10; i++){
-		cin >> *(arr.begin + i);
+		cin >> *(arr1.begin + i);
 	}
 
-	cout << arr.find(5) << endl;
+	Array<int> arr2(4);
 
-	cout << endl;
-	// ###########[ Homework ]##############
-	cout << arr.find_binary(10); 
+	arr2 = arr1; //	arr2.operator=(arr1);
+
+	Array<int> arr3(arr2);
+
+	Array<int> arr3 = Array<int>(); // move constructor
+	arr3 = Array<int>(); // move assignment
 
 	return 0;
 }

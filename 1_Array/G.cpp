@@ -48,7 +48,6 @@ class Array{
 			return -1;
 		}
 		
-		// ###########[ Homework ]##############
 		// implement the binary search
 		int find_binary(T data){
 
@@ -81,7 +80,12 @@ class Array{
 		}
 
 
-
+		// Operator Overloading
+		T& operator[](const unsigned& index){
+			cout << &index << endl;
+			return *(begin + index);
+		}
+		
 };
 
 int main(){										 
@@ -92,11 +96,9 @@ int main(){
 		cin >> *(arr.begin + i);
 	}
 
-	cout << arr.find(5) << endl;
-
-	cout << endl;
-	// ###########[ Homework ]##############
-	cout << arr.find_binary(10); 
+	unsigned int a = 3;
+	cout << &a << endl;
+	cout << arr[a] << endl;
 
 	return 0;
 }
