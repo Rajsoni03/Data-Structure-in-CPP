@@ -18,5 +18,6 @@
 - Implement Vector Template Class
 
 ## Day 4
+- Implement `push_back()` & `pop_back()`
 - Vector Scaling Algorithms
 - Time & Space Complexity
