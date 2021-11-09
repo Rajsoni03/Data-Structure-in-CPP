@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 template <typename T>
 class vector{
 	public:
@@ -18,7 +17,7 @@ class vector{
 		};
 
 		void push_back(T ele){
-			
+
 			T *temp = new T[size+1]; // allocate new memory 
 
 			for (int i = 0; i < size; ++i){ // copy all elements of previous array to new array

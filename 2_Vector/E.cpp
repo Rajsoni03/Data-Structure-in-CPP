@@ -3,6 +3,7 @@ using namespace std;
 
 template <typename T>
 class vector{
+		const int BLOCK_SIZE = 16;
 	public:
 		T *begin;
 		T *end;
@@ -10,13 +11,14 @@ class vector{
 		int capacity; // max memory allocation
 
 		vector(){
-			begin = new T[1];
+			begin = new T[BLOCK_SIZE];
 			size = 0;
-			capacity = 1;
+			capacity = BLOCK_SIZE;
 			end = begin;
 		};
 
 		void push_back(T ele){
+
 			if (size < capacity){
 				end = begin+size;
 				*(end) = ele;
@@ -24,12 +26,12 @@ class vector{
 			}
 
 			else{
-				T *temp = new T[capacity*2];
+				T *temp = new T[size+BLOCK_SIZE];
 
 				for (int i = 0; i < size; i++){
 					*(temp + i) = *(begin+i);
 				}
-				capacity = capacity*2;
+				capacity += BLOCK_SIZE;
 
 				delete[] begin;
 
@@ -39,7 +41,6 @@ class vector{
 				end = begin+size;
 				size++;
 			}
-
 		}
 
 		T operator[](int index){
