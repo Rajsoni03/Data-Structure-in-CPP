@@ -22,8 +22,38 @@ class LinkedList{
 			if (tail == nullptr){ tail = head; } 	// step 4
 		};
 
-		void push_back(T data){};
+		void push_back(T data){
+			Node *n = new Node(data);
+			if (head == nullptr){ head = tail = n; }
+			else { tail->next = n; }
+		};
+
+		void pop_front(){
+			if (head != nullptr){
+				Node *temp = head;
+				if (head == tail){ tail = nullptr; }
+				head = head->next;
+				delete temp;
+			}
+		}
+
+		void pop_back(){
+			if (head != nullptr){
+				if (head->next == nullptr){
+					delete head;
+					head = tail = nullptr;
+				}
+				else{
+					Node *temp = head;
+					while (temp->next->next != nullptr){ temp = temp->next;	}
+					delete temp->next;
+					temp->next = nullptr;
+				}
+			}
+		}
+
 		void push_at(T data, int index){};
+		void pop_at(int index){};
 
 		void display(){
 			Node *temp = head;
@@ -41,6 +71,14 @@ int main(){
 	lst.push_front(10);
 	lst.push_front(20);
 	lst.push_front(30);
+	lst.push_back(5);
+
+	lst.pop_back();
+	lst.pop_back();
+	lst.pop_back();
+	lst.pop_back();
+	lst.pop_back();
+
 
 	lst.display();
 	return 0;

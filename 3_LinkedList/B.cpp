@@ -22,7 +22,12 @@ class LinkedList{
 			if (tail == nullptr){ tail = head; } 	// step 4
 		};
 
-		void push_back(T data){};
+		void push_back(T data){
+			Node *n = new Node(data);
+			if (head == nullptr){ head = tail = n; }
+			else { tail->next = n; }
+		};
+
 		void push_at(T data, int index){};
 
 		void display(){
@@ -41,6 +46,7 @@ int main(){
 	lst.push_front(10);
 	lst.push_front(20);
 	lst.push_front(30);
+	lst.push_back(5);
 
 	lst.display();
 	return 0;
