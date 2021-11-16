@@ -25,7 +25,7 @@ class LinkedList{
 		void push_back(T data){
 			Node *n = new Node(data);
 			if (head == nullptr){ head = tail = n; }
-			else { tail->next = n; }
+			else { tail->next = n; tail = n; }
 		};
 
 		void pop_front(){
@@ -90,14 +90,22 @@ class LinkedList{
 			}
 			cout << "nullptr" << endl;
 		};
+
+		bool empty(){
+			if (head == nullptr) return true;
+			else return false;
+		}
+		
 };
 
 int main(){
 	LinkedList<int> lst;
+
 	lst.push_front(10);
 	lst.push_front(20);
 	lst.push_front(30);
 	lst.push_back(5);
+	lst.push_back(6);
 
 	lst.push_at(25, 1);
 	lst.push_at(15, 3);

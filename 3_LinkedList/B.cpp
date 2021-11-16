@@ -25,7 +25,7 @@ class LinkedList{
 		void push_back(T data){
 			Node *n = new Node(data);
 			if (head == nullptr){ head = tail = n; }
-			else { tail->next = n; }
+			else { tail->next = n; tail = n; }
 		};
 
 		void push_at(T data, int index){};
@@ -47,6 +47,7 @@ int main(){
 	lst.push_front(20);
 	lst.push_front(30);
 	lst.push_back(5);
+	lst.push_back(6);
 
 	lst.display();
 	return 0;

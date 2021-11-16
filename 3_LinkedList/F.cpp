@@ -24,6 +24,15 @@ void display(){
 	}
 }
 
+bool find(int ele){
+	Node *temp = head;
+	while(temp != nullptr){
+		if (temp->data == ele) return true;
+		temp = temp->next;
+	}
+	return false;
+}
+
 int main(){
 	int N, ele;
 	cin >> N;
@@ -31,8 +40,11 @@ int main(){
 		cin >> ele;
 		push_front(ele);
 	}
+	cin >> ele;
 
-	display();
+	if (find(ele)) cout << "element found\n";
+	else cout << "element not found\n";
+
 
 	return 0;
 }

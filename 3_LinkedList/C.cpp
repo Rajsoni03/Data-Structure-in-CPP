@@ -25,7 +25,7 @@ class LinkedList{
 		void push_back(T data){
 			Node *n = new Node(data);
 			if (head == nullptr){ head = tail = n; }
-			else { tail->next = n; }
+			else { tail->next = n; tail = n; }
 		};
 
 		void pop_front(){
