@@ -1,1 +1,2 @@
-element not found
+head -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> nullptr
+head -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> nullptr

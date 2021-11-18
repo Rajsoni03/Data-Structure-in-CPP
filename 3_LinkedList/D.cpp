@@ -15,6 +15,11 @@ class LinkedList{
 	public:
 		LinkedList() : head(nullptr), tail(nullptr){};
 
+		LinkedList(const & LinkedList obj){
+			
+
+		}
+
 		void push_front(T data){
 			Node *n = new Node(data); 	
 			n->next = head;			  			
@@ -95,7 +100,7 @@ class LinkedList{
 			if (head == nullptr) return true;
 			else return false;
 		}
-		
+
 };
 
 int main(){
