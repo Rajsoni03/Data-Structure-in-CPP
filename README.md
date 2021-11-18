@@ -22,7 +22,7 @@
 - Use STL Vector
 
 ### Linked List
-- Implement LinkedList template class
+- Implement Singly LinkedList template class
 - Use nested Node class
 - Implement insertion methods
   - `push_front()`
@@ -36,5 +36,8 @@
 - Implement Linear Search
 - Reverse the Linked List 
   - With new Node
-  - Inplace 
+  - Inplace
+- Addition of elements of 2 Linked List
 - Fatch N th element from last of Linked List
+- loop detection in singly Linked List
+- Implementing Doubly Linked List
