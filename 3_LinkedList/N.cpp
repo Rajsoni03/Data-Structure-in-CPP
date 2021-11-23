@@ -27,10 +27,9 @@ bool loop_detection(){ // time = O(n), space = O(1)
 
 	while(temp1 != temp2){
 		temp1 = temp1->next;
-		temp2 = temp2->next;
+		temp2 = temp2->next->next;
 	}
 	return 0;
-
 }
 
 
