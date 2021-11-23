@@ -22,7 +22,7 @@
 - Use STL Vector
 
 ### Linked List
-- Implement Singly LinkedList template class
+- Implement Singly LinkedList Template Class
 - Use nested Node class
 - Implement insertion methods
   - `push_front()`
@@ -32,12 +32,20 @@
   - `pop_front()`
   - `pop_back()`
   - `pop_at()`
-- Fatch N th element and overload `operator[]`
+  - `earse()`
+- Struct based Implementation of Linked List
+- Fetch N th element and overload `operator[]`
 - Implement Linear Search
 - Reverse the Linked List 
   - With new Node
-  - Inplace
-- Addition of elements of 2 Linked List
-- Fatch N th element from last of Linked List
+  - Stack Based
+  - Inplace with 3 pointers
+- Fetch N th element from last of Linked List
 - loop detection in singly Linked List
-- Implementing Doubly Linked List
+  - Using set
+  - Flyod's Algorithm
+
+- Create Doubly LinkedList Template Class
+- Implement `push_front()`, `push_back()` and `push_at()`
+- Implement `pop_front()`, `pop_back()` and `pop_at()`
+

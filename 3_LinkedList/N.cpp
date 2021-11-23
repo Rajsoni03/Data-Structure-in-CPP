@@ -1,4 +1,4 @@
-// Loop Detection using Flyid's Algorithm
+// Loop Detection using Flyod's Algorithm
 
 #include <iostream>
 #include <set>
