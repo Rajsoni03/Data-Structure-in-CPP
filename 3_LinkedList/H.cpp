@@ -1,3 +1,5 @@
+// Reverse a LinkList using with new node
+
 #include <iostream>
 using namespace std;
 
@@ -26,7 +28,7 @@ void display(){
 	cout << "nullptr" << endl;
 };
 
-void reverse_new_node(){
+void reverse(){
 	Node *temp = head;
 	Node *temp_head = nullptr;
 	while(temp != nullptr){
@@ -34,8 +36,8 @@ void reverse_new_node(){
 		n->next = temp_head;
 		temp_head = n;
 
-		Node *del = temp; //6
-		temp = temp->next; //5
+		Node *del = temp; 
+		temp = temp->next; 
 		delete del;
 	}
 	head = temp_head;
@@ -50,15 +52,9 @@ int main(){
 		cin >> ele;
 		push_front(ele);
 	}
-
-	int start_index, end_index;
-
-	cin >> start_index >> end_index;
-
+	
 	display();
-
-	reverse_new_node();
-
+	reverse();
 	display();
 
 	return 0;

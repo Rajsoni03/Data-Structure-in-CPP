@@ -1,3 +1,5 @@
+// Reverse a LinkedList inplace using 3 pointers
+
 #include <iostream>
 using namespace std;
 
@@ -50,14 +52,8 @@ int main(){
 		push_front(ele);
 	}
 
-	int start_index, end_index;
-
-	cin >> start_index >> end_index;
-
 	display();
-
 	reverse();
-
 	display();
 
 	return 0;

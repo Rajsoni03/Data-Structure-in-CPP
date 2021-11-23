@@ -1,3 +1,6 @@
+// Print N th element from last node / reverse index at single traversal
+// Using 2 pointer
+
 #include <iostream>
 using namespace std;
 
@@ -26,7 +29,7 @@ void display(){
 	cout << "nullptr" << endl;
 };
 
-void print_at_last_optimized(int i){
+void print_from_last_optimized(int i){
 	Node *F = head;
 	Node *B = head;
 
@@ -50,7 +53,7 @@ int main(){
 	display();
 
 	cin >> ele;
-	print_at_last_optimized(ele);
+	print_from_last_optimized(ele);
 
 	return 0;
 }

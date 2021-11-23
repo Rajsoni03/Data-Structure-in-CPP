@@ -1,3 +1,6 @@
+// Implement pop_front() method
+// Implement pop_back() method
+
 #include <iostream>
 using namespace std;
 
@@ -51,9 +54,6 @@ class LinkedList{
 				}
 			}
 		}
-
-		void push_at(T data, int index){};
-		void pop_at(int index){};
 
 		void display(){
 			Node *temp = head;

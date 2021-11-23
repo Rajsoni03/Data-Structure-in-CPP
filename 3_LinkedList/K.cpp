@@ -1,3 +1,7 @@
+// Print N th element from last node / reverse index
+// by calculate lenth of List method 
+// 2 time traversal on list
+
 #include <iostream>
 using namespace std;
 
@@ -26,14 +30,14 @@ void display(){
 	cout << "nullptr" << endl;
 };
 
-void print_at_last(int i){
+void print_from_last(int index_from_last){
 	int count = 0;
 	Node *temp = head;
 	while(temp != nullptr){
 		count++;
 		temp = temp->next;
 	}
-	int index =  count - i;
+	int index =  count - index_from_last;
 	temp = head;
 	while(--index){
 		temp = temp->next;
@@ -51,10 +55,7 @@ int main(){
 
 	display();
 
-
-	cin >> ele;
-	print_at_last(ele);
-	print_at_last(4);
+	print_from_last(1);
 
 	return 0;
 }

@@ -1,3 +1,5 @@
+// Implement find() method for Search Element
+
 #include <iostream>
 using namespace std;
 
@@ -44,7 +46,6 @@ int main(){
 
 	if (find(ele)) cout << "element found\n";
 	else cout << "element not found\n";
-
 
 	return 0;
 }

@@ -1,3 +1,5 @@
+// Loop Detection using Flyid's Algorithm
+
 #include <iostream>
 #include <set>
 using namespace std;
@@ -25,10 +27,15 @@ bool loop_detection(){ // time = O(n), space = O(1)
 	Node *temp1 = head;
 	Node *temp2 = head;
 
-	while(temp1 != temp2){
+	while(temp2 && temp2->next){
 		temp1 = temp1->next;
 		temp2 = temp2->next->next;
+		if (temp1 == temp2) {
+			cout << "Loop Detected" << endl;
+			return 1;
+		}
 	}
+	cout << "Loop Not Detected" << endl;
 	return 0;
 }
 
@@ -50,8 +57,8 @@ int main(){
 
 	n6->next = n3;
 
-	loop_detection();
-	display();
+	cout << loop_detection();
+	// display();
 
 	return 0;
 }

@@ -1,13 +1,14 @@
+// struct based implementstion of Linked List
+
 #include <iostream>
 using namespace std;
 
-class Node {
+struct Node {  // class Node
 public:
 	int data;
 	Node *next;
 	Node(int data):data(data), next(nullptr){};
 };
-
 Node *head = nullptr;
 
 void push_front(int data){

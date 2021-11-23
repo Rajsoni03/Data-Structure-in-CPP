@@ -1,3 +1,5 @@
+// implement earse() method for range based deletion
+
 #include <iostream>
 using namespace std;
 
@@ -26,7 +28,7 @@ void display(){
 	cout << "nullptr" << endl;
 };
 
-void pop_at(int start_index, int end_index){
+void earse(int start_index, int end_index){
 	Node *temp1 = head;	
 	int range = end_index - start_index;
 
@@ -52,13 +54,10 @@ int main(){
 	}
 
 	int start_index, end_index;
-
 	cin >> start_index >> end_index;
 
 	display();
-
-	pop_at(start_index, end_index);
-
+	earse(start_index, end_index);
 	display();
 
 	return 0;

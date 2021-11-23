@@ -1,3 +1,5 @@
+// Implement push_back() method
+
 #include <iostream>
 using namespace std;
 
@@ -27,8 +29,6 @@ class LinkedList{
 			if (head == nullptr){ head = tail = n; }
 			else { tail->next = n; tail = n; }
 		};
-
-		void push_at(T data, int index){};
 
 		void display(){
 			Node *temp = head;

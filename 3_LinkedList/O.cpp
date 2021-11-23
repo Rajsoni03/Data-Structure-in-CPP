@@ -1,3 +1,8 @@
+// Create Template Based Doubly LinkedList Class
+// Implement push_front()
+// Implement display()
+
+
 #include <iostream>
 using namespace std;
 
@@ -20,8 +25,10 @@ class DoublyLinkedList{
 		void push_front(T data){
 			Node *n = new Node(data);
 			n->next = head;
+
 			// if (head) head->prev = n; else tail = n;
 			head ?  head->prev = n : tail = n;
+			
 			head = n;
 			size++;
 		}
@@ -35,16 +42,6 @@ class DoublyLinkedList{
 			}
 			cout << " tail\n";
 		}
-
-		void display_reverse(){
-			Node *temp = tail;
-			cout << "tail -> ";
-			while(temp){
-				cout << temp->data << " -> ";
-				temp = temp->prev;
-			}
-			cout << " head\n";
-		}
 };
 
 int main(){
@@ -54,6 +51,5 @@ int main(){
 	dll.push_front(30);
 	dll.push_front(40);
 	dll.display();
-	dll.display_reverse();
 	return 0;
 }

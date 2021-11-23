@@ -1,3 +1,7 @@
+// Implement push_back() method
+// Implement display_reverse()
+
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,8 @@
+// Create LinkedList Template Class
+// Create Nested Node Class
+// Implement push_front() method
+// Implement display() method
+
 #include <iostream>
 using namespace std;
 
@@ -21,9 +26,6 @@ class LinkedList{
 			head = n;				  				// step 3
 			if (tail == nullptr){ tail = head; } 	// step 4
 		};
-
-		void push_back(T data){};
-		void push_at(T data, int index){};
 
 		void display(){
 			Node *temp = head;

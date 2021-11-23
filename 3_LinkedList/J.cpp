@@ -1,3 +1,6 @@
+// implement copy constructor
+// implement is_empty() method
+
 #include <iostream>
 using namespace std;
 
@@ -16,7 +19,6 @@ class LinkedList{
 		LinkedList() : head(nullptr), tail(nullptr){};
 
 		LinkedList(const LinkedList & obj){
-			// cout << "copy construtor" << endl;
 			head = tail = nullptr;
 			Node *temp = obj.head;
 			while(temp != nullptr){
