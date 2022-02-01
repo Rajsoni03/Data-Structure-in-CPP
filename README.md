@@ -7,6 +7,7 @@
 - Implement Binary Search Algorithm
 - Copy Constructor & Copy Assignment
 - Move Constructor & Move Assignment 
+- Operator Overloading
 - Use STL Array 
 
 ### Vector
