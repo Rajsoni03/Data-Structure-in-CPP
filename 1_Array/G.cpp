@@ -73,23 +73,19 @@ class Array{
 
 				else if (*(begin+mid_index) < data)		
 					start_index = mid_index + 1;
-			
 			}
 			cout << "Element Not Found" << endl;
 			return -1;
 		}
-
 
 		// Operator Overloading
 		T& operator[](const unsigned& index){
 			cout << &index << endl;
 			return *(begin + index);
 		}
-		
 };
 
-int main(){										 
-	
+int main(){
 	Array<int> arr(10); 
 
 	for (int i = 0; i < 10; i++){
@@ -99,6 +95,7 @@ int main(){
 	unsigned int a = 3;
 	cout << &a << endl;
 	cout << arr[a] << endl;
+	cout << 
 
 	return 0;
 }

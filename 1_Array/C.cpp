@@ -1,11 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// a-z A-Z _ $
-// 0-9 XXXX
-// #()[]{} XXXX
-// keywords XXXX
-
 template <class T>
 class Array{
 	public:
@@ -17,24 +12,23 @@ class Array{
 		Array(int size){
 			begin = new T[size]; 
 		}
-		Array(int size, T data){
+		Array(int size, T init_data){
 			begin = new T[size]; 
 			for (int i = 0; i < size; i++){
-				*(begin + i) = data;
+				*(begin + i) = init_data;
 			}
 		}
 };
 
-int main(){										 
-	
+int main(){
 	Array<int> arr(5); // [0x00, 0x04, 0x08, 0x12, 0x16]
 
 	for (int i = 0; i < 5; i++){
-		cin >> *(arr.begin + i);
+		cin >> arr.begin[i];
 	}
 
 	for (int i = 0; i < 5; i++){
-		cout << *(arr.begin + i) << endl;
+		cout << arr.begin[i] << endl;
 	}
 
 	return 0;

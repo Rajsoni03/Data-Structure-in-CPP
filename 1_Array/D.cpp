@@ -21,22 +21,21 @@ class Array{
 			this->size = size;
 			begin = new T[this->size]; 
 			for (int i = 0; i < this->size; i++){
-				*(this->begin + i) = data;
+				this->begin[i] = data;
 			}
 		}
 
 		// member methods
 		T at(unsigned index){
-			// start add. + (size of int * index)	
 			if (index < size)
-				return *(begin + index);
+				return begin[index]; // start add. + (size of int * index)	
 			else 
 				cout << "Index out of range" << endl;
 				return -1;
 		}
-		int find(T data){
+		int find(T data){ // linear search
 			for (int i = 0; i < size; i++){
-				if (*(begin + i) == data)
+				if (begin[i] == data)
 					return i;
 			}
 			return -1;
@@ -50,11 +49,11 @@ int main(){
 	cout << arr.size << endl;
 
 	for (int i = 0; i < 5; i++){
-		cin >> *(arr.begin + i);
+		cin >> arr.begin[i];
 	}
 
 	cout << arr.at(3) << endl; // arr[3]
-	cout << arr.at(6) << endl; //
+	cout << arr.at(6) << endl; // print -1
 
 	cout << arr.find(3); 
 

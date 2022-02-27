@@ -22,7 +22,7 @@ class Array{
 			this->size = size;
 			begin = new T[this->size]; 
 			for (int i = 0; i < this->size; i++){
-				*(this->begin + i) = data;
+				this->begin[i] = data;
 			}
 		}
 
@@ -40,7 +40,7 @@ class Array{
 			int itr = 0;
 			for (int i = 0; i < size; i++){
 				itr++;
-				if (*(begin + i) == data){
+				if (begin[i] == data){
 					cout << "Itration in find : " << itr << endl;
 					return i;
 				}
@@ -58,30 +58,23 @@ class Array{
 
 			int itr = 0;
 
-			int max_run = log(size)+2;
-			while (max_run--){
+			while (start_index <= end_index){
 				itr++;
-				cout << start_index << " : " << mid_index << " : " << end_index << endl;
-
 				mid_index = (start_index + end_index)/2;
-
-				if (*(begin+mid_index) == data){
+				if (begin[mid_index] == data){
 					cout << "Itration in find_binary : " << itr << endl;
 					return mid_index;
 				}
-				else if (*(begin+mid_index) > data)		
-					end_index = mid_index - 1;
+				else if (begin[mid_index] > data)		
+					end_index = mid_index;
 
-				else if (*(begin+mid_index) < data)		
+				else if (begin[mid_index] < data)		
 					start_index = mid_index + 1;
-			
+				cout << start_index << " : " << mid_index << " : " << end_index << endl;
 			}
 			cout << "Element Not Found" << endl;
 			return -1;
 		}
-
-
-
 };
 
 int main(){										 
@@ -89,11 +82,9 @@ int main(){
 	Array<int> arr(10); 
 
 	for (int i = 0; i < 10; i++){
-		cin >> *(arr.begin + i);
+		cin >> arr.begin[i];
 	}
-
 	cout << arr.find(5) << endl;
-
 	cout << endl;
 	// ###########[ Homework ]##############
 	cout << arr.find_binary(10); 

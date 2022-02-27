@@ -1,6 +1,4 @@
-// Implement push_back() method in douby LinkedList
-// Implement display_reverse()
-
+// Implement push_at() and pop_at() method in douby LinkedList
 
 #include <iostream>
 using namespace std;
@@ -56,6 +54,40 @@ class DoublyLinkedList{
 			}
 			cout << " head\n";
 		}
+		// void push_at(T data, int index){
+		// 	if (index == 0) {push_front(data); return;}
+		// 	if (size == index) {push_back(data); return;}
+		// 	if (size < index) {cout << "index out of range\n"; return;}
+		// 	Node *temp = head;
+		// 	while(index--){
+		// 		temp = temp->next;
+		// 	}
+		// 	Node *n = new Node(data);
+		// 	n->next = temp;
+		// 	n->prev = temp->prev;
+		// 	temp->prev->next = n;
+		// 	temp->prev = n;
+		// 	size++;
+		// }
+
+		void push_at(T data, int index){
+			if (index == 0) {push_front(data); return;}
+			if (size == index) {push_back(data); return;}
+			if (size < index) {cout << "index out of range\n"; return;}
+			Node *temp = head;
+			while(--index){
+				temp = temp->next;
+			}
+			Node *n = new Node(data);
+			n->next = temp->next;
+			n->prev = temp;
+			temp->next = n;
+			n->next->prev = n;
+			size++;
+		}
+		int pop_at(){
+			
+		}
 };
 
 int main(){
@@ -66,8 +98,9 @@ int main(){
 	dll.push_back(40);
 	dll.push_front(50);
 	dll.push_back(60);
-
 	dll.display();
-	dll.display_reverse();
+
+	dll.push_at(90, 10);
+	dll.display();
 	return 0;
 }

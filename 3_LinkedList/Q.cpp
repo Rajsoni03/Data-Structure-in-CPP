@@ -1,6 +1,4 @@
-// Implement push_back() method in douby LinkedList
-// Implement display_reverse()
-
+// Implement pop_back() and pop_front() method in douby LinkedList
 
 #include <iostream>
 using namespace std;

@@ -4,7 +4,6 @@ using namespace std;
 // arr[5] = 200 204 208 212 216
 // i = 500
 
-
 int main()
 {
 	int n;
