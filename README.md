@@ -45,7 +45,6 @@
 - loop detection in singly Linked List
   - Using set
   - Flyod's Algorithm
-
 - Create Doubly LinkedList Template Class
 - Implement `push_front()`, `push_back()` and `push_at()`
 - Implement `pop_front()`, `pop_back()` and `pop_at()`
