@@ -13,8 +13,8 @@ class Node{
 
 void inorder(Node *n){
 	if (!n) return;
-	cout << n->val << ' ';
 	if (n->left) inorder(n->left);
+	cout << n->val << ' ';
 	if (n->right) inorder(n->right);
 }
 

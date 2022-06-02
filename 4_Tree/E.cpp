@@ -11,13 +11,6 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-void preorder(Node *n){
-	if (!n) return;
-	if (n->left) preorder(n->left);
-	cout << n->val << ' ';
-	if (n->right) preorder(n->right);
-}
-
 bool areSame(Node *n1, Node *n2){
 	if (!n1 && !n2) return true;
 	if (!n1 || !n2) return false;

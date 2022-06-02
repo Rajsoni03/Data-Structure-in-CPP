@@ -13,11 +13,11 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-void preorder(Node *n){
+void inorder(Node *n){
 	if (!n) return;
-	if (n->left) preorder(n->left);
+	if (n->left) inorder(n->left);
 	cout << n->val << ' ';
-	if (n->right) preorder(n->right);
+	if (n->right) inorder(n->right);
 }
 
 void mirror(Node *n){
@@ -46,10 +46,10 @@ int main(){
 	n->right->right = new Node(7);
 
 	cout << "Preorder of Orignal Tree" << endl;
-	preorder(n);
+	inorder(n);
 
 	mirror(n);
 
 	cout << "\nPreorder of Mirror Tree" << endl;
-	preorder(n);
+	inorder(n);
 }

@@ -1,6 +1,7 @@
-// Preorder Traversal
+// Iterative Inorder Traversal
 
 #include <iostream>
+#include <stack>
 using namespace std;
 
 class Node{
@@ -11,12 +12,19 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-void preorder(Node *n){
-	if (!n) return;
-	cout << n->val << ' ';
-	if (n->left) preorder(n->left);
-	if (n->right) preorder(n->right);
+void preorderIterative(Node *n){
+	stack<Node*> stk;
+	while(!stk.empty() || n){
+		while(n){
+			cout << n->val << ' ';
+			stk.push(n);
+			n = n->left;
+		}
+		n = stk.top()->right;
+		stk.pop();
+	}
 }
+
 
 /*
 		4
@@ -38,5 +46,5 @@ int main(){
 
 	Node *n4 = new Node(4, n2, n6);
 
-	preorder(n4);
+	preorderIterative(n4);
 }

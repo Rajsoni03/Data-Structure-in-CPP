@@ -11,20 +11,6 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-void inorder(Node *n){
-	if (!n) return;
-	cout << n->val << ' ';
-	if (n->left) inorder(n->left);
-	if (n->right) inorder(n->right);
-}
-
-void preorder(Node *n){
-	if (!n) return;
-	if (n->left) preorder(n->left);
-	cout << n->val << ' ';
-	if (n->right) preorder(n->right);
-}
-
 void postorder(Node * n){
 	if (!n) return;
 	if (n->left) postorder(n->left);
@@ -53,7 +39,5 @@ int main(){
 
 	Node *n4 = new Node(4, n2, n6);
 
-	// inorder(n4);
-	// preorder(n4);
 	postorder(n4);
 }

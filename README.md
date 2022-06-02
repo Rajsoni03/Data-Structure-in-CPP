@@ -51,9 +51,14 @@
 
 ## Tree
 - Implementing Binery Tree using Node Class
-- Inorder Traversal
-- Preorder Traversal
-- Postorder Traversal
+- Recursive Traversal
+  - Inorder Traversal
+  - Preorder Traversal
+  - Postorder Traversal
 - Check if Two Trees Are Same
 - Convert to Mirror Tree
 - Check if Two Trees Are Mirror
+- Iterative Traversal
+  - Inorder Traversal
+  - Preorder Traversal
+  - Postorder Traversal
