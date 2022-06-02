@@ -1,6 +1,8 @@
-// Check if Two Trees Are Same
+// Check If Two Trees Are Mirror
 
 #include <iostream>
+#include <string>
+#include <algorithm>
 using namespace std;
 
 class Node{
@@ -18,18 +20,18 @@ void preorder(Node *n){
 	if (n->right) preorder(n->right);
 }
 
-bool areSame(Node *n1, Node *n2){
+bool areMirror(Node *n1, Node *n2){
 	if (!n1 && !n2) return true;
 	if (!n1 || !n2) return false;
-	return (n1->val == n2->val) && areSame(n1->left, n2->left) && areSame(n1->right, n2->right);
+	return (n1->val == n2->val) && areMirror(n1->left, n2->right) && areMirror(n1->right, n2->left);
 }
 
 /*
         4                       4
       /   \                   /   \
-     2     6       ==        2     6 
+     2     6       ==        6     2 
     / \   / \               / \   / \
-   1   3 5   7             1   3 5   7
+   1   3 5   7             7   5 3   1
 */
 
 
@@ -43,12 +45,12 @@ int main(){
 	n1->right->right = new Node(7);
 
 	Node *n2         = new Node(4);
-	n2->left         = new Node(2);
-	n2->left->left   = new Node(1);
-	n2->left->right  = new Node(3);
-	n2->right        = new Node(6);
-	n2->right->left  = new Node(5);
-	n2->right->right = new Node(7);
+	n2->left         = new Node(6);
+	n2->left->left   = new Node(7);
+	n2->left->right  = new Node(5);
+	n2->right        = new Node(2);
+	n2->right->left  = new Node(3);
+	n2->right->right = new Node(1);
 
-	areSame(n1, n2) ? cout << "Are Same" : cout << "Are Not Same" ;
+	areMirror(n1, n2) ? cout << "Are Mirror" : cout << "Are Not Mirror" ;
 }

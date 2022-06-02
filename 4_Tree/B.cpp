@@ -1,5 +1,6 @@
+// Inorder Traversal
+
 #include <iostream>
-#include <string>
 using namespace std;
 
 class Node{
@@ -12,7 +13,7 @@ class Node{
 
 void inorder(Node *n){
 	if (!n) return;
-	cout << n->val << endl;
+	cout << n->val << ' ';
 	if (n->left) inorder(n->left);
 	if (n->right) inorder(n->right);
 }

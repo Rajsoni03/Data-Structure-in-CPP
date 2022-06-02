@@ -1,5 +1,6 @@
+// Postorder Traversal
+
 #include <iostream>
-#include <string>
 using namespace std;
 
 class Node{
@@ -12,7 +13,7 @@ class Node{
 
 void inorder(Node *n){
 	if (!n) return;
-	cout << n->val << endl;
+	cout << n->val << ' ';
 	if (n->left) inorder(n->left);
 	if (n->right) inorder(n->right);
 }
@@ -20,7 +21,7 @@ void inorder(Node *n){
 void preorder(Node *n){
 	if (!n) return;
 	if (n->left) preorder(n->left);
-	cout << n->val << endl;
+	cout << n->val << ' ';
 	if (n->right) preorder(n->right);
 }
 
@@ -28,7 +29,7 @@ void postorder(Node * n){
 	if (!n) return;
 	if (n->left) postorder(n->left);
 	if (n->right) postorder(n->right);
-	cout << n->val << endl;
+	cout << n->val << ' ';
 
 }
 
