@@ -12,18 +12,18 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-void print(stack<Node*> stk1, stack<Node*> stk2){
-	while(!stk1.empty()){
-		cout << stk1.top()->val << ' ';
-		stk1.pop();
-	}
-	cout << endl;
-	while(!stk2.empty()){
-		cout << stk2.top()->val << ' ';
-		stk2.pop();
-	}
-	cout << endl << endl;
-}
+// void print(stack<Node*> stk1, stack<Node*> stk2){
+// 	while(!stk1.empty()){
+// 		cout << stk1.top()->val << ' ';
+// 		stk1.pop();
+// 	}
+// 	cout << endl;
+// 	while(!stk2.empty()){
+// 		cout << stk2.top()->val << ' ';
+// 		stk2.pop();
+// 	}
+// 	cout << endl << endl;
+// }
 
 void postorderIterative(Node *n){
 	stack<Node*> stk1;

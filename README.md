@@ -62,3 +62,6 @@
   - Inorder Traversal
   - Preorder Traversal
   - Postorder Traversal
+- Dapth/Hight of The Tree
+  - Max Depth
+  - Min Depth
