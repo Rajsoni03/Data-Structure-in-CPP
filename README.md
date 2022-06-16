@@ -66,3 +66,11 @@
   - Max Depth
   - Min Depth
 - Flatten Binary Tree to Linked List
+
+## Algorithms
+- Recursion
+  - Fibonacci Series
+  - All Patterns
+- Dynamic Programming
+  - Fibonacci Series
+  - Frog Jump 
