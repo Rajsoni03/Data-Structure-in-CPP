@@ -74,3 +74,4 @@
 - Dynamic Programming
   - Fibonacci Series
   - Frog Jump 
+  - Min Cost Climbing Stairs

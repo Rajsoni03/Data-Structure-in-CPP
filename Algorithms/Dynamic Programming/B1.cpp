@@ -33,3 +33,12 @@ int main(){
 	cout << minEnergy(n-1, energy);
 	return 0;
 }
+
+/*
+Input:
+10
+30 10 60 10 60 50 20 10 40 10
+
+Output: 
+80
+*/
