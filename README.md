@@ -76,10 +76,13 @@
   - Fibonacci Series
   - All Pattern Printing
   
-- Dynamic Programming
+## Dynamic Programming
+- 1D DP
   - Fibonacci Series
   - Frog Jump 
   - Min Cost Climbing Stairs
+- DP on String
+  - Longest Common Substring
 
 ## Design Patterns
 - Singletan

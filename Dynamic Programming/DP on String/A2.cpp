@@ -1,5 +1,5 @@
 // Longest Common Substr
-// recurrsion + Memoization 
+// recurssion + Memoization 
 
 #include<bits/stdc++.h>
 using namespace std;

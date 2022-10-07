@@ -1,5 +1,5 @@
 // fibonacci series with dp
-// top down 
+// top down / memoization
 // time  = O(n)
 // space = O(n) + O(n) 
 
