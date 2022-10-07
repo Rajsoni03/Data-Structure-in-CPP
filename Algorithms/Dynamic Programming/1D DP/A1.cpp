@@ -2,8 +2,8 @@
 // time  = O(2^n)
 // space = O(n) 
 #include <iostream>
-#include <vector>
 #define ll long long 
+
 using namespace std;
 
 ll fab(ll n){
@@ -12,7 +12,7 @@ ll fab(ll n){
 }
 
 int main(){
-	ll n = 43;
+	ll n = 48;
 	cout << fab(n);
 
 	return 0;

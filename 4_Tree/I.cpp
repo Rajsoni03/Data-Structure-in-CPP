@@ -1,4 +1,4 @@
-// Iterative Inorder Traversal
+// Iterative Preorder Traversal
 
 #include <iostream>
 #include <stack>

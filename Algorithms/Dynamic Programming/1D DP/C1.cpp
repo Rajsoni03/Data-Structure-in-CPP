@@ -16,17 +16,13 @@ using namespace std;
 
 int minCost(int n, vector<int>& cost){
 	if (n==0) return 0;
+	if (n==1) return cost[0];
+	if (n > cost.size()) return min(minCost(n-1, cost), minCost(n-2, cost));
 
-	int left, right;
-	
-	left = cost[n-1] + minCost(n-1, cost);
-	if (n > 2)
-	right = cost[n-2] + minCost(n-2, cost);
+	int left = cost[n-1] + minCost(n-1, cost);
+	int right = cost[n-1] + minCost(n-2, cost);
 
-	if (n<cost.size())
 	return min(left, right);
-
-	// return (minCost(n-1, cost), minCost(n-2, cost));
 }
 
 int main(){
@@ -38,6 +34,19 @@ int main(){
 		cin >> cost[i];
 	}
 
-	cout << minCost(n, cost);
+	cout << minCost(n+1, cost);
 	return 0;
 }
+
+/*
+INPUT:
+10
+1 100 1 2 1 100 1 1 100 1
+
+3
+10 15 20
+
+OUTPUT:
+6
+15
+*/

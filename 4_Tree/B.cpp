@@ -8,6 +8,7 @@ class Node{
 		Node *left;
 		Node *right;
 		int val;
+
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
@@ -15,7 +16,7 @@ void inorder(Node *n){
 	if (!n) return;
 	if (n->left) inorder(n->left);
 	cout << n->val << ' ';
-	if (n->right) inorder(n->right);
+	if (n->right) inorder(n->right);	
 }
 
 /*

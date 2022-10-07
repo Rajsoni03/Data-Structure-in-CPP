@@ -1,4 +1,4 @@
-// Iterative Inorder Traversal
+// Height / Depth of the tree
 
 #include <iostream>
 using namespace std;
@@ -11,12 +11,15 @@ class Node{
 		Node(int val, Node *left = nullptr, Node *right = nullptr):val(val), left(left), right(right){};
 };
 
-int maxDepth(Node* n){
-	if (!n) return 0;
-	int l = (n->left) ? depth(n->left) : 0;
-	int r = (n->right) ? depth(n->right) : 0;
-	return (l > r) ? l + 1: r + 1;
+int height(Node* root){{
+	if (root==nullptr) return 0;
+	int left = (root->left) ? height(root->left) : 0;
+	int right = (root->right) ? height(root->right) : 0;
+	return max(left, right) + 1;
 }
+
+}
+
 /*
 		4
 	  /   \
@@ -37,5 +40,5 @@ int main(){
 
 	Node *n4 = new Node(4, n2, n6);
 
-	cout << maxDepth(n4);
+	cout << height(n4);
 }

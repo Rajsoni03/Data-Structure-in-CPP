@@ -69,9 +69,17 @@
 
 ## Algorithms
 - Recursion
+  - Print Number Series 
+  - Sum of Numbers
+  - Factorial of number
+  - Digit Sum
   - Fibonacci Series
-  - All Patterns
+  - All Pattern Printing
+  
 - Dynamic Programming
   - Fibonacci Series
   - Frog Jump 
   - Min Cost Climbing Stairs
+
+## Design Patterns
+- Singletan

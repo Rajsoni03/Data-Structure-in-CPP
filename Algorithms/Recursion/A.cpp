@@ -1,27 +1,26 @@
-// Printing Subsequences
+// print numbers 
+/*
+hello - n
+hello - n-1
+hello - n-2
+hello - n-3
+hello - .
+hello - .
+hello - .
+hello - 2
+hello - 1
+*/
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
-void subsequences(vector<int>& ds, int i, int n, int arr[]){
-	if (i == n){
-		for (int it : ds) cout << it << ' ';
-		if (ds.size()==0) cout << "{}";
-		cout << endl;
-		return;
-	}
-	ds.push_back(arr[i]);
-	subsequences(ds, i+1, n, arr);
-
-	ds.pop_back();
-	subsequences(ds, i+1, n, arr);
+void print(int n){
+	if (n<=0) return; // base case
+	cout << "hello - " << n << endl;
+	print(n-1);
 }
 
-
 int main(){
-	int n = 16;
-	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
-	vector<int> ds;
-	subsequences(ds, 0, n, arr);
+	print(10);
+	return 0;
 }
